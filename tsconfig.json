@@ -13,13 +13,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Shadcn/UI */
-    "baseUrl": ".",
+    
+    /*Jest and RTL Settings*/
+    "baseUrl": "./src",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./*"]
     },
 
     /* Linting */
@@ -28,6 +26,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "src/*.ts",
+    "src/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "./jest.setup.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
